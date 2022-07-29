@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Heading from "./Heading";
 import Image from "./Image";
 
 const works = [
@@ -49,9 +48,6 @@ function MyWork() {
     return (
         <section className='w-full bg-neutral-700 mt-5'>
             <div className="container mx-auto">
-                <div className="w-full flex items-center justify-center my-5">
-                <Heading label='My Work'/>
-                </div>
                 <div className="w-full overflow-x-auto">
                     <div className="flex p-3 gap-3 whitespace-nowrap items-center justify-start">
                         {

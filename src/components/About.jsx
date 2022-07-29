@@ -22,9 +22,9 @@ function About() {
                     <div className="flex items-center flex-col gap-3 z-40">
                         <h1 className='text-center leading-snug text-4xl text-white'>Omar Tag</h1>
                         <div className="container max-w-xl">
-                            <p className='text-center text-stone-200 overflow-ellipsis'>Hey there this is omar tag iam creative deisnger <br /> and logo designer Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem quisquam dicta odio nulla ipsam quasi voluptas voluptates, ratione maiores impedit nesciunt id esse est sit cum perspiciatis amet ipsum.</p>
+                            <p className='text-center text-stone-200 overflow-ellipsis'>Graphic Designer</p>
                         </div>
-                        <ContactMe />
+                        <ContactMe bg />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 import React from 'react'
-import { FaHome } from 'react-icons/fa';
+import { AiOutlineBehanceSquare } from 'react-icons/ai';
+import { FaHome, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import {GoLocation} from 'react-icons/go';
 import { useInView } from 'react-intersection-observer';
 import Heading from './Heading';
 
@@ -24,9 +26,9 @@ function Contact() {
         <section ref={ref} className="w-full flex flex-col items-center gap-5 p-5">
             <Heading label='Contact' />
             <div className="container mx-auto grid sm:grid-cols-4 grid-cols-2 gap-4 place-content-between">
-                <ContactItem icon={<FaHome />} to='' delay='0s' inView={inView} label='LOCATION' />
-                <ContactItem icon={<FaHome />} to='' delay='.1s' inView={inView} label='Social Media' />
-                <ContactItem icon={<FaHome />} to='' delay='.3s' inView={inView} label='Behance' />
+                <ContactItem icon={<GoLocation />} to='' delay='0s' inView={inView} label='LOCATION' />
+                <ContactItem icon={<FaInstagram />} to='' delay='.1s' inView={inView} label='Instagram' />
+                <ContactItem icon={<AiOutlineBehanceSquare />} to='' delay='.3s' inView={inView} label='Behance' />
                 <ContactItem icon={<MdEmail />} to='' delay='.5s' inView={inView} label='Email' />
             </div>
         </section>

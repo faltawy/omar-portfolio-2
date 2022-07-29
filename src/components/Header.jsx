@@ -1,7 +1,10 @@
 import React from 'react'
-import { FaPhone } from 'react-icons/fa'
-export function ContactMe() {
-    return (<button onClick={()=>{window.scrollTo(0,document.body.scrollHeight)}} className='flex items-center gap-1 text-white bg-neutral-500 px-2 py-1 font-bold'>
+import { FaPhone } from 'react-icons/fa';
+
+
+
+export function ContactMe({ bg }) {
+    return (<button onClick={() => { window.scrollTo(0, document.body.scrollHeight) }} className={`flex items-center gap-1 text-white ${bg ? 'bg-neutral-500' : 'bg-transparent'} px-2 py-1 font-bold`}>
         <span>Contact Me</span>
         <i><FaPhone /></i>
     </button>)
