@@ -4,7 +4,7 @@ import OMAR from '../images/main/omar.jpg';
 import { ContactMe } from './Header';
 function About() {
     return (
-        <section className='hero w-screen'>
+        <section className='hero w-full'>
             <div className='w-full h-[175px] rounded-b-xl overflow-hidden group cursor-pointer'>
                 <div className='w-full h-full bg-slate-700 relative'>
                     <div className='w-full flex items-center justify-center z-[21] absolute top-0 left-0'>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Heading from "./Heading";
 import Image from "./Image";
 
 const works = [
@@ -36,7 +37,7 @@ function Switch({ category, change, selected }) {
     const ifSelected = selected === category;
 
     return (
-        <button className={`transition-all whitespace-nowrap text-neutral-100 text-lg leading-tight ${ifSelected ? 'font-bold text-opacity-100' : 'text-opacity-60 font-semibold'}`} onClick={() => { change(category) }}>
+        <button className={`transition-all whitespace-nowrap text-neutral-100 text-sm leading-tight ${ifSelected ? 'font-bold text-opacity-100' : 'text-opacity-60 font-semibold'}`} onClick={() => { change(category) }}>
             <span>{category.toLowerCase()}</span>
         </button>
     )
@@ -46,10 +47,10 @@ function MyWork() {
     const categories = getCategories()
     const [selected, setSelected] = useState(categories[0])
     return (
-        <section className='w-screen bg-neutral-700 mt-5'>
+        <section className='w-full bg-neutral-700 mt-5'>
             <div className="container mx-auto">
-                <div className="w-full text-center my-5">
-                    <h2 className="text-3xl font-semibold text-neutral-300">My Work</h2>
+                <div className="w-full flex items-center justify-center my-5">
+                <Heading label='My Work'/>
                 </div>
                 <div className="w-full overflow-x-auto">
                     <div className="flex p-3 gap-3 whitespace-nowrap items-center justify-start">
@@ -63,7 +64,7 @@ function MyWork() {
                     {
                         works.map(
                             function (work, index) {
-                                return (work.category === selected && <Image {...work} key={index} />)
+                                return (work.category === selected && <Image {...work} key={index} delay={100 + index*20 + 'ms'} />)
                             }
                         )
                     }

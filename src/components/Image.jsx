@@ -3,13 +3,13 @@ import { FaExpandArrowsAlt } from "react-icons/fa"
 import Overlay from "./Overlay"
 import useExpand from "./useExpand"
 
-export default function Image({ img, category, title }) {
+export default function Image({ img, category, title,delay }) {
     const [expanded, toggle] = useExpand(false)
 
     return (
         <Fragment>
             <Overlay expanded={expanded} toggle={toggle} image_url={img} />
-            <div className='shadow-xl show w-[250px] group h-[350px] relative rounded-2xl overflow-hidden hover:-translate-y-1 transition-all hover:shadow-2xl'>
+            <div style={{animationDelay:delay}} className='shadow-xl show w-[250px] slit-in-vertical group h-[350px] relative rounded-2xl overflow-hidden hover:-translate-y-1 transition-all hover:shadow-2xl'>
                 <div className="w-full absolute flex items-center justify-center inset-0 h-full bg-gray-900 transition-all opacity-0 group-hover:opacity-50">
                     <button onClick={toggle} className='sm:cursor-pointer text-White'>
                         <FaExpandArrowsAlt size={60} />

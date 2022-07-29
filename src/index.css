@@ -3,15 +3,90 @@
 @tailwind components;
 
 @tailwind utilities;
+@import url('./animation.css');
 
-::selection{
+::selection {
     @apply bg-slate-700 text-white
 }
-@layer base{
-    html{
-        font-family:'Raleway',sans-serif;
+
+@layer base {
+    html {
+        font-family: 'Raleway', sans-serif;
+        scroll-behavior: smooth;
     }
-    body{
+    
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        @apply transition-all
+    }
+
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+        @apply transition-all
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #e1e1e1;
+        border: 0px none #ffffff;
+        border-radius: 100px;
+        @apply transition-all
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #000000;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #303635;
+        border: 47px none #ffffff;
+        border-radius: 50px;
+        @apply transition-all
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        background: #303030;
+    }
+
+    ::-webkit-scrollbar-track:active {
+        background: #6b6b6b;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    body {
         @apply bg-neutral-700
     }
+}
+
+.show__contact {
+    -webkit-animation: flicker-in-1 2s linear both;
+    animation: flicker-in-1 2s linear both;
+}
+
+
+.show__contact2 {
+    -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.slit-in-vertical {
+    -webkit-animation: slit-in-vertical .45s ease-out both;
+    animation: slit-in-vertical .45s ease-out both
+}
+
+.overlay_softhide {
+    animation: softHide 1 2s ease-out forwards;
+}
+
+
+.overlay_softshow {
+    animation: softShow 1 .5s ease-in-out forwards;
 }
