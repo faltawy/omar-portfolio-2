@@ -1,6 +1,6 @@
 import React from 'react'
 import COVER from '../images/main/cover.jpg';
-import OMAR from '../images/main/omar.jpg';
+import OMAR from '../images/main/omar.jpeg';
 import { ContactMe } from './Header';
 function About() {
     return (
